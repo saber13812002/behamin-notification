@@ -22,7 +22,11 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.4|^8.0",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-soap": "*",
+        "ext-openssl": "*",
+        "illuminate/support": "^7.0|^8.0",
+        "ramsey/uuid": "^4.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.19"
