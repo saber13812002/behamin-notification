@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Behamin\Notification\NotificationBuilder isVisibleForUser(bool $isVisible)
  * @method static \Behamin\Notification\NotificationBuilder action(int $actionType, string $action)
  * @method static \Behamin\Notification\NotificationBuilder autoCancel(bool $autoCancel)
- * @method static \Behamin\Notification\NotificationBuilder addAction(string $title, int $actionType, string $action)
+ * @method static \Behamin\Notification\NotificationBuilder addButton(string $title, int $actionType, string $action)
  * @method static \Behamin\Notification\NotificationBuilder priority(string $priority)
  * @method static \Behamin\Notification\NotificationBuilder type($type)
  * @method static \Behamin\Notification\NotificationBuilder image(string $image)

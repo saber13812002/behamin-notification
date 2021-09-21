@@ -4,9 +4,9 @@ namespace Behamin\Notification;
 
 class NotificationBuilder
 {
-    private string $title;
+    private ?string $title = null;
     private string $appId;
-    private string $description;
+    private ?string $description = null;
     private ?string $icon;
     private ?string $image = null;
     private ?string $data = null;
@@ -79,7 +79,7 @@ class NotificationBuilder
         return $this;
     }
 
-    public function addAction(string $title, int $actionType, string $action): NotificationBuilder
+    public function addButton(string $title, int $actionType, string $action): NotificationBuilder
     {
         $this->actions[] = [
             'title' => $title,
