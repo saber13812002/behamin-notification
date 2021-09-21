@@ -26,6 +26,20 @@ use Illuminate\Support\Facades\Facade;
  */
 class Notification extends Facade
 {
+    public const ACTION_OPEN_APP = 0;
+    public const ACTION_OPEN_WEB_URL = 1;
+    public const ACTION_OPEN_OTHER_APP = 2;
+    public const ACTION_OPEN_PAGE = 3;
+    public const ACTION_OPEN_TELEGRAM_CHANNEL = 4;
+    public const ACTION_OPEN_INSTAGRAM_PAGE = 5;
+    public const ACTION_CALL_SERVICE = 6;
+
+    public const PRIORITY_HIGH = 'high';
+    public const PRIORITY_NORMAL = 'normal';
+
+    public const TYPE_NOTIFICATION = 'notification';
+    public const TYPE_DATA = 'data';
+
     protected static function getFacadeAccessor(): string
     {
         return NotificationBuilder::class;

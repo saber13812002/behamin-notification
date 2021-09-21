@@ -12,7 +12,7 @@ class NotificationBuilder
     private ?string $data = null;
     private string $package;
     private bool $isVisibleForUser = true;
-    private int $actionType = self::ACTION_OPEN_APP;
+    private ?int $actionType;
     private ?string $action = null;
     private bool $autoCancel = true;
     private array $actions = array();
@@ -21,20 +21,6 @@ class NotificationBuilder
     private string $priority;
     private array $tokens = array();
     private bool $isOlderVersion;
-
-    public const ACTION_OPEN_APP = 0;
-    public const ACTION_OPEN_WEB_URL = 1;
-    public const ACTION_OPEN_OTHER_APP = 2;
-    public const ACTION_OPEN_PAGE = 3;
-    public const ACTION_OPEN_TELEGRAM_CHANNEL = 4;
-    public const ACTION_OPEN_INSTAGRAM_PAGE = 5;
-    public const ACTION_CALL_SERVICE = 6;
-
-    public const PRIORITY_HIGH = 'high';
-    public const PRIORITY_NORMAL = 'normal';
-
-    public const TYPE_NOTIFICATION = 'notification';
-    public const TYPE_DATA = 'data';
 
     public function __construct()
     {
