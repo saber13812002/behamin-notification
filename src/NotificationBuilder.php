@@ -33,12 +33,20 @@ class NotificationBuilder
         $this->isOlderVersion = config('notification.is_older_version');
     }
 
+    /**
+     * @param  string  $icon
+     * @return $this
+     */
     public function icon(string $icon): NotificationBuilder
     {
         $this->icon = $icon;
         return $this;
     }
 
+    /**
+     * @param  string  $data
+     * @return $this
+     */
     public function data(string $data): NotificationBuilder
     {
         $this->data = $data;
@@ -46,12 +54,21 @@ class NotificationBuilder
     }
 
 
+    /**
+     * @param  bool  $isVisible
+     * @return $this
+     */
     public function isVisibleForUser(bool $isVisible): NotificationBuilder
     {
         $this->isVisibleForUser = $isVisible;
         return $this;
     }
 
+    /**
+     * @param  int  $actionType
+     * @param  string  $action
+     * @return $this
+     */
     public function action(int $actionType, string $action): NotificationBuilder
     {
         $this->actionType = $actionType;
@@ -59,12 +76,22 @@ class NotificationBuilder
         return $this;
     }
 
+    /**
+     * @param  bool  $autoCancel
+     * @return $this
+     */
     public function autoCancel(bool $autoCancel): NotificationBuilder
     {
         $this->autoCancel = $autoCancel;
         return $this;
     }
 
+    /**
+     * @param  string  $title
+     * @param  int  $actionType
+     * @param  string  $action
+     * @return $this
+     */
     public function addButton(string $title, int $actionType, string $action): NotificationBuilder
     {
         $this->actions[] = [
@@ -75,30 +102,50 @@ class NotificationBuilder
         return $this;
     }
 
+    /**
+     * @param  string  $priority
+     * @return $this
+     */
     public function priority(string $priority): NotificationBuilder
     {
         $this->priority = $priority;
         return $this;
     }
 
+    /**
+     * @param $type
+     * @return $this
+     */
     public function type($type): NotificationBuilder
     {
         $this->type = $type;
         return $this;
     }
 
+    /**
+     * @param  string  $image
+     * @return $this
+     */
     public function image(string $image): NotificationBuilder
     {
         $this->image = $image;
         return $this;
     }
 
+    /**
+     * @param  string  $title
+     * @return $this
+     */
     public function title(string $title): NotificationBuilder
     {
         $this->title = $title;
         return $this;
     }
 
+    /**
+     * @param  string  $description
+     * @return $this
+     */
     public function description(string $description): NotificationBuilder
     {
         $this->description = $description;
@@ -116,6 +163,9 @@ class NotificationBuilder
         return $this->buildNotificationData();
     }
 
+    /**
+     * @return array
+     */
     private function buildNotificationData(): array
     {
         // $this->prepareTokens();
