@@ -5,7 +5,7 @@ namespace Behamin\Notification;
 class NotificationBuilder
 {
     private ?string $title = null;
-    private string $appId;
+    private int $appId;
     private ?string $description = null;
     private ?string $icon;
     private ?string $image = null;
@@ -28,7 +28,7 @@ class NotificationBuilder
         $this->channelId = config('notification.channel_id');
         $this->priority = config('notification.priority');
         $this->icon = config('notification.icon');
-        $this->type = "notification";
+        $this->type = config('notification.type');
         $this->appId = config('notification.app_id');
         $this->isOlderVersion = config('notification.is_older_version');
     }
@@ -168,7 +168,6 @@ class NotificationBuilder
      */
     private function buildNotificationData(): array
     {
-        // $this->prepareTokens();
         $notificationData = [
             'app_id' => $this->appId,
             'tokens' => $this->tokens,
