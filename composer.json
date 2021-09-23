@@ -26,5 +26,12 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.19"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Behamin\\Notification\\Providers\\BehaminNotificationProvider"
+            ]
+        }
     }
 }
