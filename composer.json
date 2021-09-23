@@ -3,7 +3,6 @@
     "homepage": "https://github.com/mohammad1444/behamin-notification",
     "type": "library",
     "license": "MIT",
-    "version": "1.0",
     "autoload": {
         "psr-4": {
             "Behamin\\Notification\\": "src/"
