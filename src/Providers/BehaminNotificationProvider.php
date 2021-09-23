@@ -20,7 +20,7 @@ class BehaminNotificationProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/notification.php' => config_path('notification.php'),
+                __DIR__.'/../../config/notification.php' => config_path('notification.php'),
             ], 'config');
         }
     }
