@@ -3,11 +3,15 @@
 Behamin standard format for sending notification
 
 ## Installation
+
 1. Install the package with composer
+
 ```bash
 composer require behamin/bresources
 ```
+
 2. publish package config file
+
 ```bash
 php artisan vendor:publish --provider="Behamin\Notification\Providers\BehaminNotificationProvider" --tag="config"
 ```
@@ -27,6 +31,7 @@ Notification::title('hello')
     ->type(Notification::TYPE_DATA)
     ->action(Notification::ACTION_OPEN_APP, "")
     ->priority(Notification::PRIORITY_NORMAL)
+    ->sendAt("2021-12-01 12:00:00")
     ->isVisibleForUser(true)
     ->autoCancel(false)
     ->addButton("new button", Notification::ACTION_OPEN_APP, "")
@@ -44,6 +49,7 @@ $expectedArray = [
     ],
     "type" => "data",
     "priority" => "normal",
+    "scheduled_at" => "2021-12-01 12:00:00",
     "payload" => [
         "title" => "hello",
         "description" => "description",
