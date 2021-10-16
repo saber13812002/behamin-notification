@@ -20,6 +20,7 @@ class NotificationTest extends TestCase
             ],
             "type" => "data",
             "priority" => "normal",
+            "scheduled_at" => null,
             "payload" => [
                 "title" => "hello",
                 "description" => "description",

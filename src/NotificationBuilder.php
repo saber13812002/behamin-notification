@@ -19,6 +19,7 @@ class NotificationBuilder
     private string $channelId;
     private string $type;
     private string $priority;
+    private ?string $sendAt = null;
     private array $tokens = array();
     private bool $isOlderVersion;
 
@@ -112,6 +113,11 @@ class NotificationBuilder
         return $this;
     }
 
+    public function sendAt(string $sendAt): NotificationBuilder {
+        $this->sendAt = $sendAt;
+        return $this;
+    }
+
     /**
      * @param $type
      * @return $this
@@ -173,6 +179,7 @@ class NotificationBuilder
             'tokens' => $this->tokens,
             'type' => $this->type,
             'priority' => $this->priority,
+            'scheduled_at' => $this->sendAt,
             'payload' => [
                 'title' => $this->title,
                 'description' => $this->description,

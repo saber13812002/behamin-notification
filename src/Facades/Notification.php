@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Behamin\Notification\NotificationBuilder addButton(string $title, int $actionType, string $action)
  * @method static \Behamin\Notification\NotificationBuilder priority(string $priority)
  * @method static \Behamin\Notification\NotificationBuilder type($type)
+ * @method static \Behamin\Notification\NotificationBuilder sendAt(string $sendAt)
  * @method static \Behamin\Notification\NotificationBuilder image(string $image)
  * @method static \Behamin\Notification\NotificationBuilder description(string $description)
  * @method static array build(...$tokens)
