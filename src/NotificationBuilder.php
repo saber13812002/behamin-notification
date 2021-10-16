@@ -19,7 +19,7 @@ class NotificationBuilder
     private string $channelId;
     private string $type;
     private string $priority;
-    private string $sendAt;
+    private ?string $sendAt = null;
     private array $tokens = array();
     private bool $isOlderVersion;
 
