@@ -12,7 +12,7 @@ class NotificationBuilder
     private ?string $data = null;
     private string $package;
     private bool $isVisibleForUser = true;
-    private ?int $actionType;
+    private ?int $actionType = null;
     private ?string $action = null;
     private bool $autoCancel = true;
     private array $actions = array();
@@ -165,7 +165,11 @@ class NotificationBuilder
      */
     public function build(...$tokens): array
     {
-        $this->tokens = func_get_args();
+        if (is_array(func_get_arg(0))) {
+            $this->tokens = func_get_arg(0);
+        } else {
+            $this->tokens = array(func_get_arg(0));
+        }
         return $this->buildNotificationData();
     }
 
