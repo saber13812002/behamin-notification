@@ -12,7 +12,7 @@ class NotificationBuilder
     private ?string $data = null;
     private string $package;
     private bool $isVisibleForUser = true;
-    private ?int $actionType;
+    private ?int $actionType = null;
     private ?string $action = null;
     private bool $autoCancel = true;
     private array $actions = array();
