@@ -165,10 +165,10 @@ class NotificationBuilder
      */
     public function build(...$tokens): array
     {
-        if (is_array(func_get_arg(0))) {
-            $this->tokens = func_get_arg(0);
+        if (is_array($tokens[0])) {
+            $this->tokens = $tokens[0];
         } else {
-            $this->tokens = array(func_get_arg(0));
+            $this->tokens = $tokens;
         }
         return $this->buildNotificationData();
     }
